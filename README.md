@@ -1,28 +1,26 @@
 # Symlink Handler
 
-[![Build Status](https://travis-ci.org/kporras07/composer-symlinks.svg?branch=master)](https://travis-ci.org/kporras07/composer-symlinks)
-
 Composer script handling creation of symlinks inside your composer project.
 
 *Note:* Symlinks will become files copy when composer is run with `--no-dev`
 
 # Installation
 Installation can be done as usually using composer.
-`composer require kporras07/composer-symlinks`
+`composer require supsign/composer-symlinks`
 
 # Usage
 Add the following in your root `composer.json` file:
 
 ```php
 "require": {
-    "kporras07/composer-symlinks": "dev-master"
+    "supsign/composer-symlinks": "dev-master"
 },
 "scripts": {
     "post-install-cmd": [
-        "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
+        "Supsign\\ComposerSymlinks\\ScriptHandler::createSymlinks"
     ],
     "post-update-cmd": [
-        "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
+        "Supsign\\ComposerSymlinks\\ScriptHandler::createSymlinks"
     ]
 },
 "extra": {
