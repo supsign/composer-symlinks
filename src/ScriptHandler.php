@@ -6,7 +6,7 @@ use Composer\Package\PackageInterface;
 use Composer\Script\Event;
 use Symfony\Component\Filesystem\Filesystem;
 
-class ScriptHandlerSymlink
+class ScriptHandler
 {
     public static function createSymlinks(Event $event, Filesystem $filesystem = null)
     {
