@@ -1,5 +1,5 @@
 <?php
-namespace Kporras07\ComposerSymlinks;
+namespace Supsign\ComposerSymlinks;
 
 use Composer\Config;
 use Composer\Package\PackageInterface;
