@@ -1,10 +1,9 @@
 <?php
-namespace Supsign\ComposerSymlinks;
+namespace Supsign\ComposerZip;
 
 use Composer\Config;
 use Composer\Package\PackageInterface;
 use Composer\Script\Event;
-use Symfony\Component\Filesystem\Filesystem;
 
 class ScriptHandler
 {

@@ -1,17 +1,12 @@
 {
-    "name": "supsign/composer-symlinks",
-    "description": "Composer script handling symlinks",
+    "name": "supsign/composer-zip",
+    "description": "Composer script handling for zipping Files",
     "keywords": ["composer", "script", "symlink"],
     "license": "MIT",
     "authors": [
-        {"name": "Kevin Porras", "email": "kporras07@gmail.com"},
         {"name": "Fabrizio Cocco", "email": "fabrizio.cocco@supsign.ch"}
     ],
-    "require": {
-        "symfony/filesystem": "^2.5 || ^3.0"
-    },
-
     "autoload": {
-        "psr-4": {"Supsign\\ComposerSymlinks\\": "src/"}
+        "psr-4": {"Supsign\\ComposerZip\\": "src/"}
     }
 }
