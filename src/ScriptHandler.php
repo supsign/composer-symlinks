@@ -18,7 +18,6 @@ class ScriptHandler
         $vendorPath = $config->get('vendor-dir');
         $rootPath = dirname($vendorPath);
         $filesystem = $filesystem ?: new Filesystem;
-
         foreach ($symlinks as $sourceRelativePath => $targetRelativePath) {
             // Remove trailing slash that can cause the target to be deleted by ln.
             $targetRelativePath = rtrim($targetRelativePath, '/');
@@ -52,7 +51,7 @@ class ScriptHandler
 
             // Build and execute final command.
             $mkdirCmd = 'mkdir -p ' . $targetDirname;
-            exec($mkdirCmd);
+         //   exec($mkdirCmd);
             $cmd = 'cd ' . $targetDirname . ' && ' . $command . ' ' . $sourceRelativePath . ' ' . basename($targetRelativePath);
             exec($cmd);
 
