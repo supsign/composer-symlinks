@@ -1,4 +1,5 @@
 <?php
+
 namespace Supsign\ComposerSymlinks;
 
 use Composer\Config;
@@ -51,10 +52,8 @@ class ScriptHandler
 
             // Build and execute final command.
             $mkdirCmd = 'mkdir -p ' . $targetDirname;
-         //   exec($mkdirCmd);
-            $cmd = 'cd ' . $targetDirname . ' && ' . $command . ' ' . $sourceRelativePath . ' ' . basename($targetRelativePath);
-            exec($cmd);
-
+            //   exec($mkdirCmd);
+            symlink($sourceAbsolutePath, $targetAbsolutePath);
         }
     }
 }
