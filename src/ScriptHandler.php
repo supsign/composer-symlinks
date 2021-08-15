@@ -42,19 +42,11 @@ class ScriptHandler
                 ));
 
                 $targetDirname = dirname($targetAbsolutePath);
-                // $sourceRelativePath = substr($filesystem->makePathRelative($sourceAbsolutePath, $targetDirname), 0, -1);
-
-                $command = 'ln -s';
-                if (!$event->isDevMode()) {
-                    $command = 'cp -r';
-                }
-
+                
                 // Escape spaces in path.
                 $targetDirname = preg_replace('/(?<!\\))[ ]/', '\\ ', $targetDirname);
 
                 // Build and execute final command.
-                $mkdirCmd = 'mkdir -p ' . $targetDirname;
-                //   exec($mkdirCmd);
                 symlink($sourceAbsolutePath, $targetAbsolutePath);
             }
         }
